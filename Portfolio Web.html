@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Graphic Design Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6e6e6;
+            color: #333;
+        }
+        header {
+            background-color: #ff6e1f;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .hero {
+            background-image: url('hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+            box-shadow: inset 0 0 0 1000px #222222;
+        }
+        .hero h1 {
+            font-size: 2.3em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+        .btn {
+            background-color: #ff6e1f;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+        .btn:hover {
+            background-color: #e55337;
+        }
+        .portfolio-section {
+            padding: 30px 20px;
+            background-color: #e6e6e6;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.4s ease;
+        }
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+        .portfolio-item .details {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            width: 100%;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: transform 0.4s ease, opacity 0.4s ease;
+        }
+        .portfolio-item:hover .details {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        footer {
+            text-align: center;
+            background-color: #222222;
+            color: #fff;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        .skill-circle-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+        }
+        .skill-circle {
+            text-align: center;
+            margin: 10px;
+            width: 100px; /* Set a consistent width */
+        }
+        .circular-chart {
+            display: block;
+            margin: 10px auto;
+            max-width: 100px;  /* Set a consistent max width */
+            max-height: 100px; /* Set a consistent max height */
+        }
+        .circle-bg {
+            fill: none;
+            stroke: #eee;
+            stroke-width: 3.8;
+        }
+        .circle {
+            fill: none;
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke: #ff6e1f;
+            animation: progress 1s ease-out forwards;
+        }
+        @keyframes progress {
+            0% {
+                stroke-dasharray: 0 100;
+            }
+        }
+        .percentage {
+            fill: #333;
+            font-size: 0.5em;
+            text-anchor: middle;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Hi, I'm Eka Nur Ferdiansyah</h1>
+        <p>A Graphic Designer who brings ideas to life.</p>
+        <a href="#portfolio" class="btn">View My Work</a>
+    </section>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <h2 style="text-align: center; margin-bottom: 40px;">My Project</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://i.pinimg.com/564x/11/b6/a7/11b6a77b61255b23c20aef041ab80903.jpg" alt="Project 1">
+                <div class="details">
+                    <h3>Project 1</h3>
+                    <p>Solitude in magnificence</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://i.pinimg.com/564x/c2/ce/15/c2ce15c859a00f023f9d97ac11a5ee35.jpg" alt="Project 2">
+                <div class="details">
+                    <h3>Project 2</h3>
+                    <p>loneliness.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://i.pinimg.com/736x/6d/bc/0b/6dbc0be7b3aac800977c7aac414733c8.jpg" alt="Project 3">
+                <div class="details">
+                    <h3>Project 3</h3>
+                    <p>Peace of the mind.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://i.pinimg.com/564x/cc/02/69/cc0269da3babb89ec19b8ac221a4f394.jpg" alt="Project 4">
+                <div class="details">
+                    <h3>Project 4</h3>
+                    <p>Tranquil.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skill Bar Section -->
+    <section id="skills" style="padding: 10px; background-color: #e6e6e6; text-align: center;">
+        <h2>My Skills</h2>
+        <div class="skill-circle-container">
+            <div class="skill-circle" data-percentage="85">
+                <svg viewBox="0 0 36 36" class="circular-chart orange">
+                    <path class="circle-bg" d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path class="circle" stroke-dasharray="85, 100" d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <text x="18" y="20.35" class="percentage">85%</text>
+                </svg>
+                <p>Photoshop</p>
+            </div>
+            <div class="skill-circle" data-percentage="75">
+                <svg viewBox="0 0 36 36" class="circular-chart orange">
+                    <path class="circle-bg" d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path class="circle" stroke-dasharray="75, 100" d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <text x="18" y="20.35" class="percentage">75%</text>
+                </svg>
+                <p>CorelDRAW</p>
+            </div>
+            <div class="skill-circle" data-percentage="70">
+                <svg viewBox="0 0 36 36" class="circular-chart orange">
+                    <path class="circle-bg" d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path class="circle" stroke-dasharray="70, 100" d="M18 2.0845
+                        a 15.9155 15.9155 0 0 1 0 31.831
+                        a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <text x="18" y="20.35" class="percentage">70%</text>
+                </svg>
+                <p>Illustrator</p>
+            </div>
+        </div>
+    </section>    
+    <!-- About Me Section -->
+    <section id="about" style="padding: 50px 20px; text-align: center; background-color: #f9f9f9; max-width: 100%; margin: 0 auto; line-height: 1.6;">
+        <h2>About Me</h2>
+        <p>A creative and experienced graphic designer with specialized skills in using Adobe Photoshop, Adobe Illustrator and CorelDRAW to produce professional and attractive design work. 
+            Possess the ability to transform abstract ideas into effective visuals, 
+            As well as master the various design techniques and tools necessary to create captivating and functional graphics.</p>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Diansy. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="https://pin.it/63Td61Hbg" target="_blank">Pinterest</a>
+            <a href="https://www.instagram.com/diannssyy/" target="_blank">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>
